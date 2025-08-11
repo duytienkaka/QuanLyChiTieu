@@ -6,32 +6,113 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f7f7; }
-    #app { margin: 30px auto; max-width: 600px; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
-    h1 { text-align: center; color: #2d7cff; }
-    form { display: flex; gap: 10px; margin-bottom: 24px; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0eaff 0%, #f7f7f7 100%);
+      min-height: 100vh;
+      margin: 0;
+    }
+    #app {
+      margin: 40px auto;
+      max-width: 650px;
+      background: #fff;
+      padding: 32px 36px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(45,124,255,0.08);
+    }
+    h1 {
+      text-align: center;
+      color: #2d7cff;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+    }
+    .notify {
+      background: #eaf6ff;
+      color: #2d7cff;
+      border-radius: 8px;
+      padding: 10px 18px;
+      margin-bottom: 18px;
+      text-align: center;
+      font-size: 16px;
+      display: none;
+    }
+    form {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      align-items: center;
+    }
     input[type="text"], input[type="number"] {
       flex: 1;
-      padding: 8px;
+      padding: 10px;
       border: 1px solid #d0d0d0;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 16px;
+      background: #f8fbff;
+      transition: border 0.2s;
+    }
+    input:focus {
+      border-color: #2d7cff;
+      outline: none;
     }
     button {
       background: #2d7cff;
       color: #fff;
       border: none;
-      border-radius: 6px;
-      padding: 8px 16px;
+      border-radius: 8px;
+      padding: 10px 20px;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 16px;
+      font-weight: 500;
       transition: background 0.2s;
     }
-    button:hover { background: #1956b6; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #eee; padding: 10px; text-align: left; }
-    th { background: #f0f6ff; }
-    tr:nth-child(even) { background: #fafcff; }
+    button:hover {
+      background: #1956b6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background: #f8fbff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #e3eaf5;
+      padding: 12px;
+      text-align: left;
+      font-size: 15px;
+    }
+    th {
+      background: #eaf6ff;
+      color: #1956b6;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background: #f0f6ff;
+    }
+    .action-btn {
+      margin-right: 6px;
+      padding: 7px 14px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+    .edit-btn {
+      background: #fffbe6;
+      color: #b68d00;
+      border: 1px solid #ffe58f;
+    }
+    .edit-btn:hover {
+      background: #fff3bf;
+    }
+    .delete-btn {
+      background: #ffeaea;
+      color: #d4380d;
+      border: 1px solid #ffccc7;
+    }
+    .delete-btn:hover {
+      background: #ffd6d6;
+    }
   </style>
 </head>
 <body>
