@@ -5,10 +5,40 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f7f7; }
+    #app { margin: 30px auto; max-width: 600px; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+    h1 { text-align: center; color: #2d7cff; }
+    form { display: flex; gap: 10px; margin-bottom: 24px; }
+    input[type="text"], input[type="number"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #d0d0d0;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background: #2d7cff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+    button:hover { background: #1956b6; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #eee; padding: 10px; text-align: left; }
+    th { background: #f0f6ff; }
+    tr:nth-child(even) { background: #fafcff; }
+  </style>
 </head>
 <body>
   <h1>Quản lý chi tiêu</h1>
-  <div id="app"></div>
+  <div id="app">
+    <!-- Form và bảng sẽ được render bởi app.js -->
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
